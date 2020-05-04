@@ -1,0 +1,26 @@
+.Box-container {
+  margin-bottom: 5px;
+  height: 499px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thebox {
+  height: 97%;
+  width: 98%;
+  border: solid 0.25px;
+  border-color: rgb(190, 190, 190);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.bar {
+  content: " ";
+  width: 50px;
+  height: 0px;
+  background-color: rgb(0, 174, 255);
+  transition: all 0.5s ease;
+}

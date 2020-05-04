@@ -1,0 +1,39 @@
+.container {
+  margin: 0px 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+  background-color: rgb(238, 238, 238);
+}
+
+.input {
+  appearance: none;
+  outline: 0;
+  margin: 5px 5px;
+  padding: 10px 10px;
+  width: 500px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.input:focus {
+  background-color: white;
+}
+
+.num-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 390px;
+  margin-top: 1px;
+}
+.message {
+  color: red;
+  font-size: 12px;
+  opacity: 0;
+}
+.message.active {
+  opacity: 1;
+}

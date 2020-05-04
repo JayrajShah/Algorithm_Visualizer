@@ -1,0 +1,18 @@
+.button {
+  outline: 0;
+  border: 0;
+  margin: 5px 5px;
+  padding: 12px 28px;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+}
+
+.btn-hover-shadow {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1s);
+  cursor: pointer;
+}
+/* red /ce4d4d  */
+.btn-hover-shadow:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}

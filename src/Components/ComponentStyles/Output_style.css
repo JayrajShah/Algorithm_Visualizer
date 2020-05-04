@@ -1,0 +1,10 @@
+.output-container {
+  display: flex;
+  justify-content: center;
+}
+
+.output {
+  font-size: 32px;
+  letter-spacing: 6px;
+  color: rgb(100, 100, 100);
+}

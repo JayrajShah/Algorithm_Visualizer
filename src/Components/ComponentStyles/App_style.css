@@ -1,0 +1,17 @@
+.form-wrapper {
+  padding-bottom: 15px;
+  padding: 10px 10px;
+  background-color: rgb(241, 241, 241);
+}
+.array-input-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.array-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+}

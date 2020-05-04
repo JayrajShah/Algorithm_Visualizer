@@ -1,0 +1,30 @@
+.dropdown-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 20px;
+  padding-right: 20px;
+  color: white;
+}
+
+.select-wrapper .dropdown {
+  outline: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  border: 0;
+
+  /*styling*/
+  width: 150px;
+  height: 40px;
+  justify-items: center;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select-wrapper .dropdown:focus {
+  background-color: white;
+}

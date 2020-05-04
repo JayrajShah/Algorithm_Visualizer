@@ -1,0 +1,17 @@
+.nav {
+  background-color: rgb(77, 128, 206);
+  padding: 20px 10px;
+}
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+  font-weight: 200;
+}
