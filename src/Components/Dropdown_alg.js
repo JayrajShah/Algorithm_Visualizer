@@ -6,19 +6,6 @@ export default function Dropdown(props) {
   const [info, setinfo] = useContext(infoContext);
 
   if (info.name === "") {
-    console.log("state condition satisfied");
-    const namex = setInterval(function () {
-      console.log("in set interval");
-
-      if (document.getElementById("dropdown-" + props.type)) {
-        console.log(props.title + " item found");
-        document.getElementById("dropdown-" + props.type).selectedIndex = 0;
-        clearInterval(namex);
-      }
-    }, 100);
-  }
-
-  if (info.time === null) {
     const timex = setInterval(function () {
       if (document.getElementById("dropdown-" + props.type)) {
         document.getElementById("dropdown-" + props.type).selectedIndex = 0;

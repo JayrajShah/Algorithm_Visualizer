@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import "./ComponentStyles/Thebox_style.css";
 import { infoContext } from "../infoContext";
+import { ArrayIntParser } from "../Algorithms/test";
 
 function makeBars(ele, i) {
+  console.log(ele);
   var poops = setInterval(function () {
     if (document.getElementById("bar" + i)) {
       clearInterval(poops);
@@ -14,7 +16,6 @@ function makeBars(ele, i) {
 function TheBox() {
   var i = 0;
   const [info, setinfo] = useContext(infoContext);
-
   return (
     <div className="Box-container">
       <div className="thebox">

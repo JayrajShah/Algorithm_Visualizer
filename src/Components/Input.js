@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./ComponentStyles/Input_style.css";
 import { infoContext } from "../infoContext";
+import { ArrayIntParser } from "../Algorithms/test";
 
 export default function Input(props) {
   const [info, setinfo] = useContext(infoContext);
@@ -14,6 +15,7 @@ export default function Input(props) {
       document.getElementById("message").classList.add("active");
     }
   };
+
   return (
     <div>
       <input
@@ -25,14 +27,14 @@ export default function Input(props) {
           e.preventDefault();
           var pattern = /[0-9]*,*[0-9]$/i;
           if (pattern.test(e.target.value)) {
-            var split_array = e.target.value.split(",");
+            var split_array = ArrayIntParser(e.target.value.split(","));
+
             setinfo({
               name: info.name,
               time: info.time,
               array: split_array,
               isSorted: info.isSorted,
             });
-            console.log(info.array);
             e.target.value = "";
           }
         }}

@@ -4,7 +4,7 @@ import "./ComponentStyles/ActionBlock_style.css";
 import ArrayInput from "./Input";
 import Lable from "./Lable";
 import Button from "./Button";
-
+import { A } from "../Algorithms/test";
 export default function ActionBlock() {
   const [info, setinfo] = useContext(infoContext);
 
@@ -33,7 +33,9 @@ export default function ActionBlock() {
           <Button
             title="Sort"
             color="#4d80ce"
-            onClickEvent={() => console.log("BUTTON PRESSED")}
+            onClickEvent={() => {
+              A();
+            }}
             value=""
           />
           <Button
