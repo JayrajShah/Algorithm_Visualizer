@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./ComponentStyles/Thebox_style.css";
 import { infoContext } from "../infoContext";
-import { ArrayIntParser } from "../Algorithms/test";
 
 function makeBars(ele, i) {
   console.log(ele);

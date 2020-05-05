@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { InfoProvider, infoContext } from "../infoContext";
+import { infoContext } from "../infoContext";
 import "./ComponentStyles/ActionBlock_style.css";
 import ArrayInput from "./Input";
 import Lable from "./Lable";

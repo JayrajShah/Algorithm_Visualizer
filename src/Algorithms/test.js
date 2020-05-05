@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { infoContext } from "../infoContext";
-
 export function ArrayIntParser(arr) {
   var newArr = [];
   arr.forEach((ele) => {

@@ -18,27 +18,36 @@ export default function Input(props) {
 
   return (
     <div>
-      <input
-        placeholder={props.placeholder}
-        className="input"
-        onKeyUp={inputNumCheck}
-        id="arrayInput"
-        onBlur={(e) => {
-          e.preventDefault();
-          var pattern = /[0-9]*,*[0-9]$/i;
-          if (pattern.test(e.target.value)) {
-            var split_array = ArrayIntParser(e.target.value.split(","));
+      <div className="input-wrapper">
+        <input
+          placeholder={props.placeholder}
+          className="input"
+          onKeyUp={inputNumCheck}
+          id="arrayInput"
+          onBlur={(e) => {
+            e.preventDefault();
+            var pattern = /[0-9]*,*[0-9]$/i;
+            if (pattern.test(e.target.value)) {
+              var split_array = ArrayIntParser(e.target.value.split(","));
 
-            setinfo({
-              name: info.name,
-              time: info.time,
-              array: split_array,
-              isSorted: info.isSorted,
-            });
-            e.target.value = "";
-          }
-        }}
-      />
+              setinfo({
+                name: info.name,
+                time: info.time,
+                array: split_array,
+                isSorted: info.isSorted,
+              });
+              e.target.value = "";
+            }
+          }}
+        />
+        <button className="enter-btn">
+          <img
+            src={require("../Images/side-arrow.png")}
+            className="img"
+            alt="->"
+          />
+        </button>
+      </div>
       <div className="num-check">
         <div className="message" id="message">
           Enter numbers only
