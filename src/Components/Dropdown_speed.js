@@ -6,10 +6,10 @@ export default function Dropdown(props) {
   const [info, setinfo] = useContext(infoContext);
 
   if (info.time === null) {
-    const timex = setInterval(function () {
+    const times = setInterval(function () {
       if (document.getElementById("dropdown-" + props.type)) {
         document.getElementById("dropdown-" + props.type).selectedIndex = 0;
-        clearInterval(timex);
+        clearInterval(times);
       }
     }, 100);
   }
