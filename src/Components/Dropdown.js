@@ -21,8 +21,6 @@ export default function Dropdown(props) {
   if (info.time === null) {
     const timex = setInterval(function () {
       if (document.getElementById("dropdown-" + props.type)) {
-        console.log(props.title + " item found");
-
         document.getElementById("dropdown-" + props.type).selectedIndex = 0;
         clearInterval(timex);
       }
