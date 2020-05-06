@@ -5,8 +5,18 @@ export default function Output() {
   return (
     <div>
       <div className="output-container">
-        <div className="output">Sorted Array : [1,2,3,4,5,6,7]</div>
+        <div className="output" id="output"></div>
       </div>
     </div>
   );
+}
+
+export function displayArray(array) {
+  const poops = setInterval(() => {
+    if (document.getElementById("output")) {
+      document.getElementById("output").innerText =
+        "Sorted Array :  [" + array + "]";
+      clearInterval(poops);
+    }
+  }, 100);
 }

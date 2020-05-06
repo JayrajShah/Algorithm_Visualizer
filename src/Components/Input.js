@@ -15,7 +15,6 @@ export default function Input(props) {
       document.getElementById("message").classList.add("active");
     }
   };
-
   return (
     <div>
       <div className="input-wrapper">

@@ -4,7 +4,7 @@ import "./ComponentStyles/ActionBlock_style.css";
 import ArrayInput from "./Input";
 import Lable from "./Lable";
 import Button from "./Button";
-import { A } from "../Algorithms/test";
+import { Animations } from "../Algorithms/animation";
 export default function ActionBlock() {
   const [info, setinfo] = useContext(infoContext);
 
@@ -15,13 +15,7 @@ export default function ActionBlock() {
       array: [],
       isSorted: false,
     });
-
-    console.log(info.name);
-    console.log(info.time);
-    console.log(info.array);
-    console.log(info.isSorted);
   };
-
   return (
     <div>
       <div className="form-wrapper">
@@ -34,7 +28,7 @@ export default function ActionBlock() {
             title="Sort"
             color="#4d80ce"
             onClickEvent={() => {
-              A();
+              Animations(info.array, info.time, info.name);
             }}
             value=""
           />
