@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./ComponentStyles/Input_style.css";
 import { infoContext } from "../infoContext";
 import { ArrayIntParser } from "../Algorithms/test";
+import { clearOutput } from "./Output";
 
 export default function Input(props) {
   const [info, setinfo] = useContext(infoContext);

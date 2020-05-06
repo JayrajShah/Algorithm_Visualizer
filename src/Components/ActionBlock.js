@@ -22,7 +22,7 @@ export default function ActionBlock() {
         <div className="array-input-block">
           <div className="array-input">
             <Lable title="Enter Array : " />
-            <ArrayInput placeholder="Enter ' , ' seperated numbers" />
+            <ArrayInput placeholder="Enter ' , ' seperated numbers ( value < 10 )" />
           </div>
           <Button
             title="Sort"
