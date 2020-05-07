@@ -2,5 +2,13 @@
   {
     "id": 1,
     "name": "bubblesort"
+  },
+  {
+    "id": 2,
+    "name": "selectionsort"
+  },
+  {
+    "id": 3,
+    "name": "mergesort"
   }
 ]

@@ -8,6 +8,7 @@
 }
 
 .thebox {
+  padding-top: 10px;
   height: 97%;
   width: 98%;
   border: solid 0.25px;
@@ -15,6 +16,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .bar {

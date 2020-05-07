@@ -1,16 +1,23 @@
 import { bubbleSort } from "./BubbleSort";
 import { mergeSort } from "./MergeSort";
 import { quickSort } from "./QuickSort";
+import { selectionSort } from "./SelectionSort";
 export function Animations(array, speed, name) {
   console.log("in animations");
 
   switch (name) {
     case "bubblesort":
       bubbleSort(array, speed);
+      break;
     case "mergesort":
       mergeSort(array, speed);
+      break;
     case "quicksort":
       quickSort(array, speed);
+      break;
+    case "selectionsort":
+      selectionSort(array, speed);
+      break;
   }
 }
 

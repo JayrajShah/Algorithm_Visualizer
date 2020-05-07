@@ -7,7 +7,6 @@ export default function Output() {
   const [info, setinfo] = useContext(infoContext);
 
   if (info.array.length === 0) {
-    console.log("abt to clear op");
     const poops = setInterval(() => {
       if (document.getElementById("output")) {
         document.getElementById("output").innerText = "";
@@ -35,7 +34,7 @@ export function displayArray(array) {
 }
 
 export function clearOutput(arr) {
-  if (arr.length === 0) {
+  if (arr.length !== 0) {
     console.log("abt to clear op");
     const poops = setInterval(() => {
       if (document.getElementById("output")) {

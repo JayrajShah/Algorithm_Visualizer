@@ -13,7 +13,7 @@ export function makeBars(ele, i) {
       document.getElementById("bar" + i).classList.add("bar-sorting");
 
       document.getElementById("bar" + i).style.height =
-        (ele * 10).toString() + "%";
+        (ele * 5).toString() + "%";
     }
   }, 100);
 }

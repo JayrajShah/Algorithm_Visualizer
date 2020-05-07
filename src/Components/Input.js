@@ -38,6 +38,7 @@ export default function Input(props) {
               });
               e.target.value = "";
             }
+            clearOutput(info.array);
           }}
         />
         <button className="enter-btn">
