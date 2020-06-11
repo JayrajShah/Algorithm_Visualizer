@@ -7,9 +7,15 @@ export async function selectionSort(array, speed) {
     for (let j = i + 1; j < array.length; j++) {
       if (array[j] < array[min_idx]) min_idx = j;
     }
+    console.log("still looping");
     let temp = array[min_idx];
     array[min_idx] = array[i];
     array[i] = temp;
+    if (
+      document.getElementById("resetBtn").getAttribute("stopsort") === "true"
+    ) {
+      return;
+    }
     await sleep(speed / 2);
     var l = 0;
     array.forEach((ele) => {

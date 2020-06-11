@@ -6,7 +6,11 @@ let Speed;
 export async function mergeSort(array, speed) {
   Array = array;
   Speed = speed;
+
   await split(0, Array.length - 1);
+  if (document.getElementById("resetBtn").getAttribute("stopsort") === "true") {
+    return;
+  }
   displayArray(array);
   sortedGreen(array.length);
 }
@@ -16,6 +20,12 @@ async function split(low, high) {
     let mid = Math.floor((low + high) / 2);
     await split(low, mid);
     await split(mid + 1, high);
+    if (
+      document.getElementById("resetBtn").getAttribute("stopsort") === "true"
+    ) {
+      console.log("Returning to main");
+      return;
+    }
     await sleep(Speed);
     merge(low, mid, high);
   }
@@ -40,7 +50,11 @@ async function merge(low, mid, high) {
   while (i <= mid) resarray[k++] = Array[i++];
   while (j <= high) resarray[k++] = Array[j++];
   for (let m = low; m <= high; m++) Array[m] = resarray[m];
-
+  console.log("Still in merge");
+  if (document.getElementById("resetBtn").getAttribute("stopsort") === "true") {
+    console.log("Returning to split");
+    return;
+  }
   var l = 0;
   Array.forEach((ele) => {
     makeBars(ele, l++);

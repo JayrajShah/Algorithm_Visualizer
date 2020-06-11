@@ -7,15 +7,17 @@ export default function Button(props) {
 
   if (props.title === "Sort") {
     const poops = setInterval(function () {
-      if (document.getElementById("btn")) {
+      if (document.getElementById(props.id)) {
         if (info.name !== "" && info.time !== null && info.array.length > 0) {
-          document.getElementById("btn").disabled = false;
-          document.getElementById("btn").style.backgroundColor = "#4d80ce";
-          document.getElementById("btn").classList.add("btn-hover-shadow");
+          document.getElementById(props.id).disabled = false;
+          document.getElementById(props.id).style.backgroundColor = "#4d80ce";
+          document.getElementById(props.id).classList.add("btn-hover-shadow");
         } else {
-          document.getElementById("btn").disabled = true;
-          document.getElementById("btn").style.backgroundColor = "#C0C0C0";
-          document.getElementById("btn").classList.remove("btn-hover-shadow");
+          document.getElementById(props.id).disabled = true;
+          document.getElementById(props.id).style.backgroundColor = "#C0C0C0";
+          document
+            .getElementById(props.id)
+            .classList.remove("btn-hover-shadow");
         }
         clearInterval(poops);
       }
@@ -25,12 +27,13 @@ export default function Button(props) {
   return (
     <div>
       <button
-        id="btn"
+        id={props.id}
         type="button"
         className="button btn-hover-shadow"
         onClick={props.onClickEvent}
         style={{ backgroundColor: props.color }}
         value={props.value}
+        stopsort={props.stopsort}
       >
         {props.title}
       </button>

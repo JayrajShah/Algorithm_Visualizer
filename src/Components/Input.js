@@ -4,6 +4,9 @@ import { infoContext } from "../infoContext";
 import { ArrayIntParser } from "../Algorithms/test";
 import { clearOutput } from "./Output";
 
+export function clearInput() {
+  document.getElementById("arrayInput").value = "";
+}
 export default function Input(props) {
   const [info, setinfo] = useContext(infoContext);
 
@@ -24,11 +27,16 @@ export default function Input(props) {
           className="input"
           onKeyUp={inputNumCheck}
           id="arrayInput"
-          onBlur={(e) => {
-            e.preventDefault();
+        />
+
+        <button
+          className="enter-btn"
+          onClick={(e) => {
             var pattern = /[0-9]*,*[0-9]$/i;
-            if (pattern.test(e.target.value)) {
-              var split_array = ArrayIntParser(e.target.value.split(","));
+            if (pattern.test(document.getElementById("arrayInput").value)) {
+              var split_array = ArrayIntParser(
+                document.getElementById("arrayInput").value.split(",")
+              );
 
               setinfo({
                 name: info.name,
@@ -36,12 +44,10 @@ export default function Input(props) {
                 array: split_array,
                 isSorted: info.isSorted,
               });
-              e.target.value = "";
             }
             clearOutput(info.array);
           }}
-        />
-        <button className="enter-btn">
+        >
           <img
             src={require("../Images/side-arrow.png")}
             className="img"

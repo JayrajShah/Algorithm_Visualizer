@@ -2,7 +2,7 @@ import { bubbleSort } from "./BubbleSort";
 import { mergeSort } from "./MergeSort";
 import { quickSort } from "./QuickSort";
 import { selectionSort } from "./SelectionSort";
-export function Animations(array, speed, name) {
+export function Animations(array, speed, name, [info, setinfo]) {
   console.log("in animations");
 
   switch (name) {
