@@ -18,6 +18,8 @@ export function Animations(array, speed, name, [info, setinfo]) {
     case "selectionsort":
       selectionSort(array, speed);
       break;
+    default:
+      break;
   }
 }
 
