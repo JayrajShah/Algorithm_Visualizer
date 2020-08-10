@@ -5,7 +5,7 @@ import { infoContext } from "../infoContext";
 
 export default function Output() {
   const [info, setinfo] = useContext(infoContext);
-
+  //HEy
   if (info.array.length === 0) {
     const poops = setInterval(() => {
       if (document.getElementById("output")) {
