@@ -16,38 +16,45 @@ export default function Dropdown(props) {
 
   return (
     <div className="dropdown-wrapper">
-      <div className="title">{props.title}</div>
-      <div className="select-wrapper">
-        <select
-          id={"dropdown-" + props.type}
-          className="dropdown"
-          onChange={(e) => {
-            var val = e.target.value;
-            if (props.type === "string") {
-              setinfo({
-                name: val,
-                time: info.time,
-                array: info.array,
-                isSorted: info.isSorted,
-              });
-            }
-            if (props.type === "number") {
-              setinfo({
-                name: info.name,
-                time: parseInt(val),
-                array: info.array,
-                isSorted: info.isSorted,
-              });
-            }
-          }}
-        >
-          <option vlaue="">{props.default}</option>
-          {props.listOptions.map((ele) => (
-            <option value={ele.name} key={ele.id}>
-              {ele.name}
-            </option>
-          ))}
-        </select>
+      <div
+        className="select-wrapper"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <label htmlFor="dropdown-Speed">
+          <label htmlFor="speed-title" className="title">
+            {props.title}
+          </label>
+          <select
+            id={"dropdown-" + props.type}
+            className="dropdown"
+            onChange={(e) => {
+              var val = e.target.value;
+              if (props.type === "string") {
+                setinfo({
+                  name: val,
+                  time: info.time,
+                  array: info.array,
+                  isSorted: info.isSorted,
+                });
+              }
+              if (props.type === "number") {
+                setinfo({
+                  name: info.name,
+                  time: parseInt(val),
+                  array: info.array,
+                  isSorted: info.isSorted,
+                });
+              }
+            }}
+          >
+            <option vlaue="">{props.default}</option>
+            {props.listOptions.map((ele) => (
+              <option value={ele.name} key={ele.id}>
+                {ele.name}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
     </div>
   );

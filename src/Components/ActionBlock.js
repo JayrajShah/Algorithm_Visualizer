@@ -39,8 +39,14 @@ export default function ActionBlock() {
       <div className="form-wrapper">
         <div className="array-input-block">
           <div className="array-input">
-            <Lable title="Enter Array : " />
-            <ArrayInput placeholder="Enter ' , ' seperated numbers ( 1 < value < 20 )" />
+            <label
+              htmlFor="input"
+              className="lable"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              Enter Array :{"   "}
+              <ArrayInput placeholder="Enter ' , ' seperated numbers ( 1 < value < 20 )" />
+            </label>
           </div>
           <Button
             title="Sort"
